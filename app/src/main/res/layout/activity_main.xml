@@ -4,12 +4,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="xaircraft.interviewtest.MainActivity">
+    tools:context="xaircraft.interviewtest.touchListener.MainActivity">
 
-    <Button
-        android:id="@+id/btn_touch_test"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        />
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/btn_touch_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="touch listener"
+            />
+        <ImageView
+            android:id="@+id/img_touch"
+            android:src="@mipmap/ic_launcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            />
+        <xaircraft.interviewtest.touchListener.MyLayout2
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <xaircraft.interviewtest.touchListener.MyLayout
+                android:id="@+id/m_ly"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <Button
+                    android:id="@+id/btn1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="按钮一"
+                    />
+                <Button
+                    android:id="@+id/btn2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="按钮二"
+                    />
+            </xaircraft.interviewtest.touchListener.MyLayout>
+
+        </xaircraft.interviewtest.touchListener.MyLayout2>
+    </LinearLayout>
+
+
 
 </FrameLayout>
