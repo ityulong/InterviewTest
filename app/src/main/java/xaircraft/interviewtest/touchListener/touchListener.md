@@ -17,9 +17,13 @@ viewGroup 中：
 ------
 - 事件会从viewgroup一直传递下去直到碰到最底端view，其实不管是view还是viewgroup都能都消耗事件
 - 如果任何view（viewgroup 也是属于view）都没有消费掉事件的话，事件会由顶层view一直传递到底层view,  
-再从底层view的onTouchEvent()方法一直网上传递上层view的onTouchEvent(),以此类推。如下图：
+再从底层view的onTouchEvent()方法一直网上传递上层view的onTouchEvent(),以此类推。如下图：  
+![touch-one](https://github.com/ityulong/InterviewTest/blob/6f4dd22deacd983af5abcf6b193ce6f8df486f74/app/src/main/res/img/touch-one.png)  
 
 - 即是因为viewgroup能够包含子view，所以有onInterceptTouchEven() 方法，所以能够对事件进行拦截，
-当该方法返回true，代表事件在此viewgroup处进行了拦截，不能再下发事件。如下图：
+当该方法返回true，代表事件在此viewgroup处进行了拦截，不能再下发事件。如下图：  
+![touch-two](https://github.com/ityulong/InterviewTest/blob/6f4dd22deacd983af5abcf6b193ce6f8df486f74/app/src/main/res/img/touch-two.png)  
 
+- 当消耗掉事件的时候，返回true(控件的点击事件是自动返回true的，自己监听的onTouchListener()返回的值是自己控制的)，这时候事件将不再往下传递，如图：  
+![touch-three](https://github.com/ityulong/InterviewTest/blob/6f4dd22deacd983af5abcf6b193ce6f8df486f74/app/src/main/res/img/touch-three.png) 
 
