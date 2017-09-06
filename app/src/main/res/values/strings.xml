@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">InterviewTest</string>
+    <string name="contact_title">联系人标题</string>
 </resources>
